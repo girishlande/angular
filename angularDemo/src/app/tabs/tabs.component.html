@@ -1,0 +1,12 @@
+<ul class="nav">
+  <li class="nav-item">
+    <button class="btn btn-primary" (click)="setCurrentParty('all')">All</button>&nbsp;
+  </li>
+  <li class="nav-item">
+    <button class="btn btn-primary" (click)="setCurrentParty('bjp')">BJP</button>&nbsp;
+  </li>
+  <li class="nav-item">
+    <button class="btn btn-primary" (click)="setCurrentParty('congress')">Congress</button>
+  </li>
+</ul>
+<app-list [members]="getMembers()"></app-list>

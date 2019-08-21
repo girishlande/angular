@@ -1,0 +1,15 @@
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+  <div>
+    <label for="name">Enter name:</label>
+    <input type="text" name="name" id="id" ngModel class="form-control col-3" />
+  </div>
+  <div>
+    <label for="party">Select party:</label>
+    <select name="party" id="party" ngModel class="form-control col-3">
+      <option *ngFor="let party of availableParties" [value]="party.value">
+        {{party.describe}}
+      </option>
+    </select>&nbsp;
+  </div>
+  <button type="submit" class="btn btn-primary">Add Member</button>
+</form>
