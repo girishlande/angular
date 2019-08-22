@@ -2,6 +2,8 @@
 It will contain my angular projects
 
 Basic commands
+=================
+
 npm install -g @angular/cli // to install command line interface for easy creation of angular projects/components etc. 
 
 ng new projectName  // to create new angular project folder. it will contain basic template
