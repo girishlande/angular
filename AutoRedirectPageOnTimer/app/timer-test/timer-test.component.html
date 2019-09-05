@@ -1,0 +1,21 @@
+<p>timer-test works!</p>
+<h1> {{timeLeft}}</h1>
+<button (click)="startTimer()">Start Timer</button>
+<button (click)="pauseTimer()">Pause Timer</button>
+
+<div class="container">
+  <h1>Tabs Pages</h1>
+  <div class="container">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/T1">Page1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/T2">Page2</a>
+      </li>
+    </ul>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+
