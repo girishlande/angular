@@ -28,3 +28,8 @@ npm install rxjs-compat --save // to use react js concepts such as subject, susc
 ng build --prod  // to create deployable folder. this will add all your files into compact js files and you can copy it on server. 
 
 code // to start visual studio code IDE. fire from angular project folder 
+
+If you want to update all modules in your projec to their latest version
+npm i -g npm-check-updates
+ncu -u
+npm install
