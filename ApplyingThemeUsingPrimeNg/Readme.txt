@@ -6,7 +6,6 @@ node_modules\primeng\resources\themes
 >ng new t1
 
 2. install required modules
-npm install bootstrap --save
 npm install primeng --save
 npm install @angular/cdk --save
 npm install chart.js --save
