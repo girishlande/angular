@@ -14,11 +14,16 @@ npm install --save-dev lite-server
 
 5. Edit package.json file to run lite-server
 "scripts": { "start": "lite-server"},
+OR
+"scripts": { "lite": "lite-server"},
+
 
 6. Add index.html file in project
 
 7. Run application using following command
 npm start
+OR
+npm run lite (dependeding upon what you have done in step 5)
 
 8. If you want to start application from sub folder create bs-config.js file and use following code. 
 module.exports = {
