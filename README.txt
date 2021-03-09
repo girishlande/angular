@@ -33,3 +33,14 @@ If you want to update all modules in your projec to their latest version
 npm i -g npm-check-updates
 ncu -u
 npm install
+
+
+// -------------------------------
+// Accessing REST api in localhost.
+// ------------------------------- 
+This doesn't work when REST client is in Angular and REST server is also on same machine. 
+
+you can start Chrome in following manner for testing purpose 
+in Run tool of windows 
+
+chrome.exe --user-data-dir="C://Chrome dev session" --disable-web-security

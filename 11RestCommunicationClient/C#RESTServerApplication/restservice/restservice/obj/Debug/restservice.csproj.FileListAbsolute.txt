@@ -1,0 +1,7 @@
+D:\test\dotnet-csharp\restservice\restservice\bin\Debug\restservice.exe.config
+D:\test\dotnet-csharp\restservice\restservice\bin\Debug\restservice.exe
+D:\test\dotnet-csharp\restservice\restservice\bin\Debug\restservice.pdb
+D:\test\dotnet-csharp\restservice\restservice\obj\Debug\restservice.csprojAssemblyReference.cache
+D:\test\dotnet-csharp\restservice\restservice\obj\Debug\restservice.csproj.CoreCompileInputs.cache
+D:\test\dotnet-csharp\restservice\restservice\obj\Debug\restservice.exe
+D:\test\dotnet-csharp\restservice\restservice\obj\Debug\restservice.pdb

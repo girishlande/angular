@@ -1,9 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": false
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "b2": {
+    "p2": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,12 +16,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/b2",
+            "outputPath": "dist/p2",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -40,9 +43,7 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
@@ -51,6 +52,11 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ]
             }
@@ -59,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "b2:build"
+            "browserTarget": "p2:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "b2:build:production"
+              "browserTarget": "p2:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "b2:build"
+            "browserTarget": "p2:build"
           }
         },
         "test": {
@@ -107,15 +113,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "b2:serve"
+            "devServerTarget": "p2:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "b2:serve:production"
+              "devServerTarget": "p2:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "b2"
+    }
+  },
+  "defaultProject": "p2"
 }
