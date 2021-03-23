@@ -1,15 +1,30 @@
+<script>
+  var elmnt = document.getElementById("LogList");
+
+  function scrollToTop() {
+    elmnt.scrollIntoView(true); // Top
+  }
+
+  function scrollToBottom() {
+    elmnt.scrollIntoView(false); // Bottom
+  }
+
+  scrollToBottom();
+
+</script>
 
 <div class="container">
 
   <div class="col">
-    <button (click)="GetAirCalibrationData()" class="btn btn-primary btn-block">Get Air Calibration Data</button>
+    <button (click)="GetAirCalibrationData()" class="btn btn-secondary btn-block">Get Air Calibration Data</button>
+    <button (click)="getLogAtIndex()" class="btn btn-secondary btn-block">Update Logs</button>
   </div>
   <br />
 
   <div class="col">
     <div class="row">
       <label for="Kv" style="height:100px; width:200px; text-align:right;">Kv:</label>
-      <select name="Kv" id="Kv" ngModel class="form-control col-3" multiple>
+      <select name="Kv" id="Kv" [(ngModel)]="mySelect" (change)="selectChange()" class="form-control col-3" multiple>
         <option *ngFor="let c of kvList" [value]="c">
           {{c}}
         </option>
@@ -17,7 +32,7 @@
     </div>
     <div class="row mt-1">
       <label for="focalspot" style=" width: 200px; text-align: right;">Focal Spot:</label>
-      <select name="focalspot" id="focalspot" ngModel class="form-control col-3">
+      <select name="focalspot" id="focalspot" ngModel class="form-control col-3" [(ngModel)]="selectedFocalSpot">
         <option *ngFor="let c of focalSpotList" [value]="c">
           {{c}}
         </option>
@@ -25,7 +40,7 @@
     </div>
     <div class="row mt-1">
       <label for="colm" style=" width: 200px; text-align: right;">Collimation:</label>
-      <select name="colm" id="colm" ngModel class="form-control col-3">
+      <select name="colm" id="colm" ngModel class="form-control col-3" [(ngModel)]="selectedCollimation">
         <option *ngFor="let c of collimationList" [value]="c">
           {{c}}
         </option>
@@ -33,7 +48,7 @@
     </div>
     <div class="row mt-1">
       <label for="rotation" style=" width: 200px; text-align: right;">Rotation:</label>
-      <select name="rotation" id="rotation" ngModel class="form-control col-3">
+      <select name="rotation" id="rotation" ngModel class="form-control col-3" [(ngModel)]="selectedRotation">
         <option *ngFor="let c of rotationList" [value]="c">
           {{c}}
         </option>
@@ -41,7 +56,7 @@
     </div>
 
     <div class="row mx-auto mt-1">
-      <button (click)="StartAirCalibration()" class="btn btn-success btn-block">Start Air Calibration</button>
+      <button (click)="StartAirCalibrationPost()" class="btn btn-success btn-block">Start Air Calibration</button>
     </div>
     <div class="row mx-auto mt-1">
       <button (click)="StartAirCalibrationSequence()" class="btn btn-info btn-block">Start Air Calibration Sequence</button>
@@ -56,7 +71,7 @@
   <div class="col">
     <div class="row">
       <label for="WarmupType" style=" width: 200px; text-align: right;">WarmupType:</label>
-      <select name="WarmupType" id="WarmupType" ngModel class="form-control col-3">
+      <select name="WarmupType" id="WarmupType" class="form-control col-3" [(ngModel)]="selectedWarmupType">
         <option value="cold">Cold</option>
       </select>
     </div>
@@ -69,11 +84,12 @@
     <div class="row mx-auto mt-1">
       <button (click)="CancelWarmup()" class="btn btn-danger btn-block">Cancel Warmup</button>
     </div>
+
   </div>
 
   <div class="col">
     <div class="container mx-auto mt-2" style="height: 300px; overflow: scroll; background-color: #000000;">
-      <div class="list-group">
+      <div class="list-group" id="LogList" #LogList>
         <small *ngFor="let c of logMsg" style="color: #4cff00">{{c}}</small>
       </div>
     </div>

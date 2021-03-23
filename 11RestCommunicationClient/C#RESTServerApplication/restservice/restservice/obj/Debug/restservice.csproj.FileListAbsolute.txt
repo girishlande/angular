@@ -5,3 +5,10 @@ D:\test\dotnet-csharp\restservice\restservice\obj\Debug\restservice.csprojAssemb
 D:\test\dotnet-csharp\restservice\restservice\obj\Debug\restservice.csproj.CoreCompileInputs.cache
 D:\test\dotnet-csharp\restservice\restservice\obj\Debug\restservice.exe
 D:\test\dotnet-csharp\restservice\restservice\obj\Debug\restservice.pdb
+D:\git\angular\11RestCommunicationClient\C#RESTServerApplication\restservice\restservice\bin\Debug\restservice.exe.config
+D:\git\angular\11RestCommunicationClient\C#RESTServerApplication\restservice\restservice\bin\Debug\restservice.exe
+D:\git\angular\11RestCommunicationClient\C#RESTServerApplication\restservice\restservice\bin\Debug\restservice.pdb
+D:\git\angular\11RestCommunicationClient\C#RESTServerApplication\restservice\restservice\obj\Debug\restservice.csprojAssemblyReference.cache
+D:\git\angular\11RestCommunicationClient\C#RESTServerApplication\restservice\restservice\obj\Debug\restservice.csproj.CoreCompileInputs.cache
+D:\git\angular\11RestCommunicationClient\C#RESTServerApplication\restservice\restservice\obj\Debug\restservice.exe
+D:\git\angular\11RestCommunicationClient\C#RESTServerApplication\restservice\restservice\obj\Debug\restservice.pdb
