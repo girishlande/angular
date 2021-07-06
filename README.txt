@@ -18,6 +18,8 @@ ng g s serviceName --spec false // to write new service which can be used across
 ng add @angular/material  // to add material library to project 
 
 npm install bootstrap --save // to install bootstrap library , you also need to modify angular.json file to include bootstrap.css
+ (you need to add entry in "style" of angular.json 
+  "node_modules/bootstrap/dist/css/bootstrap.min.css" )
 
 npm install @angular/http  // to install http module 
 
